@@ -1,0 +1,14 @@
+- name: Service and Pod deployment
+  hosts: all
+  become: true
+  tasks: 
+    #  - name: delete old deployment
+    #    command: kubectl delete -f /home/ubuntu/Deployment.yml
+    #  - name: delete old service
+    #    command: kubectl delete -f /home/ubuntu/Service.yml
+     - name: create new Deployment and Service for Product Catalogue
+       command: kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/productcatalogue-service.yml
+     - name: create new Deployment and Service for Shopfront
+       command: kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/shopfront-service.yml
+     - name: create new Deployment and Service for Stockmanager
+       command: kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/stockmanager-service.yml
