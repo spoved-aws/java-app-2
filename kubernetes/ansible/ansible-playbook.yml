@@ -1,5 +1,5 @@
 - name: Service and Pod deployment
-  hosts: localhost
+  hosts: all
   become: true
   tasks: 
     #  - name: delete old deployment
