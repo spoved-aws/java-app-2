@@ -72,6 +72,7 @@ node{
     } */
 
     stage("Ansible deploy the app on nodes"){
+        sh 'pwd'
         sh 'ansible-playbook kubernetes/ansible/ansible-playbook.yml -i inventory.yml'
     }    
 }
