@@ -1,5 +1,5 @@
 node{
-
+/*
     
     stage("Git checkout"){
         git branch: 'main', url: 'https://github.com/spoved-aws/java-app-2.git'
@@ -69,7 +69,7 @@ node{
     
     stage("Delete the docker images from local"){
         sh 'docker image rm  kanukhosla10/stockmanager:v1.$BUILD_ID kanukhosla10/productcatalogue:v1.$BUILD_ID kanukhosla10/shopfront:v1.$BUILD_ID kanukhosla10/stockmanager:latest kanukhosla10/productcatalogue:latest kanukhosla10/shopfront:latest'
-    }
+    } */
 
     stage("Ansible deploy the app on nodes"){
         sh 'ansible-playbook kubernetes/ansible/ansible-playbook.yml -i inventory.yml'
