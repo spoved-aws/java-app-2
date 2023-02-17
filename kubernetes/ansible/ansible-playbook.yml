@@ -1,5 +1,6 @@
 - name: Service and Pod deployment
   hosts: all
+  user: parallels
 #  become: true
   tasks: 
     #  - name: delete old deployment
