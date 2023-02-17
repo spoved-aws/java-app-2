@@ -1,10 +1,10 @@
 node{
-/*
+
     
     stage("Git checkout"){
         git branch: 'main', url: 'https://github.com/spoved-aws/java-app-2.git'
         
-    }
+    }/*
 
     stage("Building Shopfront Artifacts"){
         stage("Build Shopfront App"){
