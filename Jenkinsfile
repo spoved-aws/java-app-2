@@ -73,6 +73,6 @@ node{
 
     stage("Ansible deploy the app on nodes"){
         sh 'ansible all --list-hosts'
-        sh 'ansible-playbook kubernetes/ansible/ansible-playbook.yml -i inventory.yml'
+        sh 'ansible-playbook kubernetes/ansible/ansible-playbook.yml -i kubernetes/ansible/ansible-playbook.yml/inventory.yml'
     }    
 }
