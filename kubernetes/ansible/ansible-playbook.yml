@@ -14,6 +14,6 @@
      - name: create new Deployment and Service for Product Catalogue
        command: minikube kubectl -- apply -f /home/parallels/kubernetes/productcatalogue-service.yml
      - name: create new Deployment and Service for Shopfront
-       command: minikube kubectl -- apply -f /home/parallels/jenkins/workspace/java_app-02/kubernetes/shopfront-service.yml
+       command: minikube kubectl -- apply -f /home/parallels/kubernetes/shopfront-service.yml
      - name: create new Deployment and Service for Stockmanager
-       command: minikube kubectl -- apply -f /home/parallels/jenkins/workspace/java_app-02/kubernetes/stockmanager-service.yml
+       command: minikube kubectl -- apply -f /home/parallels/kubernetes/stockmanager-service.yml
