@@ -1,14 +1,18 @@
 - name: Service and Pod deployment
   hosts: all
-  become: true
+#  become: true
   tasks: 
     #  - name: delete old deployment
     #    command: kubectl delete -f /home/ubuntu/Deployment.yml
     #  - name: delete old service
     #    command: kubectl delete -f /home/ubuntu/Service.yml
+     - name: Copy files from local to remote servers
+       copy:
+          src: /var/lib/jenkins/workspace/java_app-02/kubernetes
+          dest: /home/parallels/
      - name: create new Deployment and Service for Product Catalogue
-       command: minikube kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/productcatalogue-service.yml
+       command: minikube kubectl apply -f /home/parallels/kubernetes/productcatalogue-service.yml
      - name: create new Deployment and Service for Shopfront
-       command: minikube kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/shopfront-service.yml
+       command: minikube kubectl apply -f /home/parallels/jenkins/workspace/java_app-02/kubernetes/shopfront-service.yml
      - name: create new Deployment and Service for Stockmanager
-       command: minikube kubectl apply -f /var/lib/jenkins/workspace/java_app-02/kubernetes/stockmanager-service.yml
+       command: minikube kubectl apply -f /home/parallels/jenkins/workspace/java_app-02/kubernetes/stockmanager-service.yml
